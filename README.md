@@ -2,7 +2,7 @@
 ![OpenTelemetry AL SDK](docs/logo.png)
 <h2 align="center">OpenTelemetry AL SDK</h2>
 <p align="center">
-    <a href="https://github.com/thetanz/opentelemetry-al/commits/main">
+    <a href="https://github.com/thetanz/opentelemetry-al/commits/master">
     <img src="https://img.shields.io/github/last-commit/thetanz/opentelemetry-al.svg?logo=github&logoColor=white"
          alt="GitHub last commit" />
     </a>
@@ -29,7 +29,7 @@ Ultimate project goal is to enable APM & distributed tracing functionality for D
 ## Usage
 TBD
 ## Architecture
-![architecture](https://www.plantuml.com/plantuml/proxy?cache=no&src=https%3A%2F%2Fraw.githubusercontent.com%2Fthetanz%2Fopentelemetry-al%2Fmain%2Fdocs%2FRefArchitecture.plantuml)
+![architecture](https://www.plantuml.com/plantuml/proxy?cache=no&src=https%3A%2F%2Fraw.githubusercontent.com%2Fthetanz%2Fopentelemetry-al%2Fmaster%2Fdocs%2FRefArchitecture.plantuml)
 ## Roadmap
 See the [open issues](https://github.com/thetanz/opentelemetry-al/issues) for a list of proposed features (and known issues).
 ## Contributing
