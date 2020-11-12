@@ -1,0 +1,54 @@
+@startuml
+package "Publisher A Example App" as ExampleApp {
+    object "Any Object" as AnyObject {
+        AnyProcedure()
+    }
+    note right
+    begin
+        Tracer.StartSpan('<Procedure Name>');
+        // ... procedure/trigger code ...
+        Tracer.EndSpan()
+    end
+    end note
+    note right
+    // Tracer must be defined globally prior use
+    TracerProvider.TryGetTracer(
+        "ServiceName",
+        SpanProcessor::LogToA,
+        Tracer);
+    end note
+}
+package "OpenTelemetry AL SDK" as OpenTelemetry #DDDDDD {
+    class TracerProvider <SingleInstance> {
+        +TryGetTracer(Text,ISpanProcessor,var Tracer)
+        +TryGetTracer(Text,ISpanProcessor,Text,var Tracer)
+    }
+    class Tracer {
+        +StartSpan(Name:Text)
+        +EndSpan()
+    }
+    interface ISpanProcessor {
+        +IsKeyValid(ProcessorKey:Text):Boolean
+        +OnStart(var Span:Record)
+        +OnEnd(var Span:Record)
+    }
+    enum SpanProcessor
+    ISpanProcessor <|.. SpanProcessor
+
+    TracerProvider -[hidden]> Tracer
+    ISpanProcessor -[hidden]> SpanProcessor
+    TracerProvider -[hidden]-> ISpanProcessor
+}
+ExampleApp ..> OpenTelemetry
+package "Publisher A Telemetry Processor" as TelemetryProcessor {
+    class LogToASpanProcessor
+    enum SpanProcessorExt {
+        LogToA
+    }
+    ISpanProcessor <|. LogToASpanProcessor
+    SpanProcessor <|- SpanProcessorExt
+    LogToASpanProcessor <|.. SpanProcessorExt
+    LogToASpanProcessor -[hidden]> SpanProcessorExt
+    SpanProcessor -[hidden]-> LogToASpanProcessor
+}
+@enduml

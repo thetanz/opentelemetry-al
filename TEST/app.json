@@ -1,0 +1,58 @@
+{
+  "id": "4156996f-98ed-4132-a297-40fd3a5e0a3d",
+  "name": "OpenTelemetry (TEST)",
+  "publisher": "Theta Systems Limited",
+  "version": "1.0.0.0",
+  "brief": "Tenant Customizations",
+  "description": "Tenant Customizations",
+  "privacyStatement": "https://www.theta.co.nz/media/3801/privacy-policy-for-theta-excel-importer-for-business-central.pdf",
+  "EULA": "https://www.theta.co.nz/media/3805/terms-and-conditions-for-appsource-apps-for-business-central.pdf",
+  "help": "https://www.theta.co.nz/contact-us",
+  "url": "https://www.theta.co.nz/",
+  "logo": "../logo.jpg",
+  "dependencies": [
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "publisher": "Microsoft",
+      "name": "Library Assert",
+      "version": "1.0.0.0"
+    },
+    {
+      "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+      "publisher": "Microsoft",
+      "name": "Tests-TestLibraries",
+      "version": "1.0.0.0"
+    },
+    {
+      "id": "98c6d8b4-a7d5-49a9-a8bb-e123768dcd7c",
+      "publisher": "Theta Systems Limited",
+      "name": "OpenTelemetry",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [
+
+  ],
+  "platform": "17.0.0.0",
+  "application": "17.0.0.0",
+  "idRanges": [
+    {
+      "from": 70254095,
+      "to": 70254104
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://docs.microsoft.com/{0}/dynamics365/business-central",
+  "supportedLocales": [
+    "en-NZ",
+    "en-AU",
+    "en-US",
+    "en-GB"
+  ],
+  "showMyCode": false,
+  "runtime": "6.0",
+  "features": [
+    "TranslationFile",
+    "NoImplicitWith",
+    "ExcludeGeneratedTranslations"
+  ]
+}

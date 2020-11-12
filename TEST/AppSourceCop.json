@@ -1,0 +1,10 @@
+{
+    "mandatorySuffix": "_OT_TSL",
+    "supportedCountries": [
+        "AU",
+        "CA",
+        "GB",
+        "NZ",
+        "ZA"
+    ]
+}
